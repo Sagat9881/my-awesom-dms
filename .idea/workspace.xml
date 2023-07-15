@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab55a560-ef3f-462d-bbfb-cfef6af3fa90" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.pre-commit-config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lombok.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/exception/ParserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/exception/ProcessorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/parser/QueryParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/parser/StringParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/DeleteQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/InsertQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/Query.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/QueryType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/SelectQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/UpdateQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/queryprocessors/ListMapQueryProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/queryprocessors/QueryProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/service/AbstractQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/service/QueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/service/StringListMapQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/utils/ExceptionUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/utils/ParserUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/utils/PredicateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/ru/apzakharov/mydbms/example.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2SbWzszcDxisrUzxLEDPAzl5rCV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.apzakharov.mydbms.Application" />
+      <module name="embedded" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.apzakharov.mydbms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab55a560-ef3f-462d-bbfb-cfef6af3fa90" name="Changes" comment="" />
+      <created>1689416027246</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689416027246</updated>
+      <workItem from="1689416029167" duration="35106000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/utils/ParserUtils.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/utils/ParserUtils.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/Application.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/Application.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/service/AbstractQueryService.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/queryprocessors/ListMapQueryProcessor.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/Application.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
