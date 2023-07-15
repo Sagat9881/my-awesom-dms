@@ -21,7 +21,7 @@ public class StringParser implements QueryParser<String> {
         Map<String, Object> row = new HashMap<>();
         final String[] split = tokenValue.split("=");
         if (split.length != 2) {
-            throw ParserException.notAcceptedPattern(tokenValue);
+            throw ParserException.notAcceptedTokenPattern(tokenValue);
         }
         row.put(split[0], split[1]);
         return row;
@@ -54,11 +54,32 @@ public class StringParser implements QueryParser<String> {
     }
 
     private SelectQuery parseSelect(String input) {
-        return new SelectQuery();
+        final String values = input.toLowerCase().split("select ")[1];
+        final Map<String, Object> tokens = Arrays.stream(values.split(", "))
+                .map(tokenValueArrToMap)
+                .reduce((map, map1) -> {
+                    map.putAll(map1);
+                    return map;
+                })
+                .orElseThrow(() -> new ParserException("Не удалось распарсить Update;\nЗапрос: [ " + input + "]"));
+        return SelectQuery.builder().predicate(  PredicateUtils.buildPredicateFromString(values)).build();
     }
 
     private UpdateQuery parseUpdate(String input) {
-        return new UpdateQuery();
+        final String values = input.toLowerCase().split("update ")[1];
+        final Map<String, Object> tokens = Arrays.stream(values.split(", "))
+                .map(tokenValueArrToMap)
+                .reduce((map, map1) -> {
+                    map.putAll(map1);
+                    return map;
+                })
+                .orElseThrow(() -> new ParserException("Не удалось распарсить Update;\nЗапрос: [ " + input + "]"));
+
+        return UpdateQuery.builder()
+                .tokenValues(tokens)
+                .predicate(
+                        PredicateUtils.buildPredicateFromString(values)
+                ).build();
     }
 
     private InsertQuery parseInsert(String input) {

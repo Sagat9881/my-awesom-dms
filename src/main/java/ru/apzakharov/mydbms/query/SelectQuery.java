@@ -1,8 +1,11 @@
 package ru.apzakharov.mydbms.query;
 
-import java.util.function.Predicate;
+import lombok.Builder;
 
+import java.util.function.Predicate;
+@Builder
 public class SelectQuery implements Query {
+    private Predicate predicate;
     @Override
     public QueryType getType() {
         return QueryType.SELECT;
@@ -10,6 +13,6 @@ public class SelectQuery implements Query {
 
     @Override
     public <Q> Predicate<Q> getPredicate() {
-        return null;
+        return predicate;
     }
 }

@@ -28,7 +28,7 @@ public class ParserException extends RuntimeException {
      * @param tokenValue
      * @return
      */
-    public static ParserException notAcceptedPattern(String tokenValue) {
+    public static ParserException notAcceptedTokenPattern(String tokenValue) {
         final String message = "Распознанный токен не соотвествует шаблону.\nТокен: [ "+tokenValue+" ]\nШаблон: [ key=value ] ";
         return new ParserException(buildMessage(message));
     }
