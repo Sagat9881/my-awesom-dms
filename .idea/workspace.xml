@@ -4,38 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab55a560-ef3f-462d-bbfb-cfef6af3fa90" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.pre-commit-config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lombok.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/exception/ParserException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/exception/ProcessorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/parser/QueryParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/parser/StringParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/DeleteQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/InsertQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/Query.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/QueryType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/SelectQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/query/UpdateQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/queryprocessors/ListMapQueryProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/queryprocessors/QueryProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/service/AbstractQueryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/service/QueryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/service/StringListMapQueryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/utils/ExceptionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/utils/ParserUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/apzakharov/mydbms/utils/PredicateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ru/apzakharov/mydbms/example.txt" afterDir="false" />
+    <list default="true" id="ab55a560-ef3f-462d-bbfb-cfef6af3fa90" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +55,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.apzakharov.mydbms.Application" />
@@ -112,12 +88,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1689416027246</updated>
-      <workItem from="1689416029167" duration="35106000" />
+      <workItem from="1689416029167" duration="36796000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1689464331364</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689464331364</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial commit">
+      <created>1689465261369</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689465261369</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
