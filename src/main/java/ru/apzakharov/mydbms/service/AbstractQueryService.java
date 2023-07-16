@@ -33,6 +33,7 @@ public abstract class AbstractQueryService<Q, S> implements QueryService<Q, S> {
     public void processCommand(Q inputCommand) {
         try {
             final Query query = parser.parseQuery(inputCommand);
+            //Максмально ужасный мув
             if (query instanceof SelectQuery) {
                 processor.processQuery(query, storage);
             } else {

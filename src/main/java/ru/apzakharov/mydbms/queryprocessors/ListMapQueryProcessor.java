@@ -57,7 +57,7 @@ public class ListMapQueryProcessor implements QueryProcessor<List<Map<String, Ob
 
     private List<Map<String, Object>> processDelete(DeleteQuery deleteQuery, List<Map<String, Object>> storage) {
         storage = storage.stream()
-                .filter(deleteQuery.getPredicate())
+                .filter(deleteQuery.getPredicate().negate())
                 .collect(Collectors.toList());
         return storage;
     }
