@@ -23,7 +23,7 @@ public class StringParser implements QueryParser<String> {
         if (split.length != 2) {
             throw ParserException.notAcceptedTokenPattern(tokenValue);
         }
-        row.put(split[0], split[1]);
+        row.put(split[0].trim(), split[1].trim());
         return row;
     };
 
@@ -31,8 +31,8 @@ public class StringParser implements QueryParser<String> {
      * Метод осуществляет сопоставленеие входной строки с конкретными объектами-запросами.
      *
      * @param input - объект, который нуно распарсить для  получения объекта-запроса
+     * @param <Q>   - тип запроса
      * @return
-     * @param <Q> - тип запроса
      */
     @Override
     public <Q extends Query> Q parseQuery(String input) {
@@ -54,31 +54,26 @@ public class StringParser implements QueryParser<String> {
     }
 
     private SelectQuery parseSelect(String input) {
-        final String values = input.toLowerCase().split("select ")[1];
-        final Map<String, Object> tokens = Arrays.stream(values.split(", "))
-                .map(tokenValueArrToMap)
-                .reduce((map, map1) -> {
-                    map.putAll(map1);
-                    return map;
-                })
-                .orElseThrow(() -> new ParserException("Не удалось распарсить Update;\nЗапрос: [ " + input + "]"));
-        return SelectQuery.builder().predicate(  PredicateUtils.buildPredicateFromString(values)).build();
+        final String values = input.toLowerCase().split("where ")[1];
+        final Predicate<Map<String, Object>> predicate = PredicateUtils.buildPredicateFromString(values);
+
+        return SelectQuery.builder().predicate(predicate).build();
     }
 
     private UpdateQuery parseUpdate(String input) {
-        final String values = input.toLowerCase().split("update ")[1];
-        final Map<String, Object> tokens = Arrays.stream(values.split(", "))
+        final String[] values = input.toLowerCase().split("values ")[1].split("where ");
+        final Map<String, Object> tokens = Arrays.stream(values[0].split(", "))
                 .map(tokenValueArrToMap)
                 .reduce((map, map1) -> {
                     map.putAll(map1);
                     return map;
                 })
-                .orElseThrow(() -> new ParserException("Не удалось распарсить Update;\nЗапрос: [ " + input + "]"));
+                .orElseThrow(() -> new ParserException("Не удалось распарсить UPDATE;\nЗапрос: [ " + input + "]"));
 
         return UpdateQuery.builder()
                 .tokenValues(tokens)
                 .predicate(
-                        PredicateUtils.buildPredicateFromString(values)
+                        PredicateUtils.buildPredicateFromString(values[1])
                 ).build();
     }
 
@@ -90,7 +85,7 @@ public class StringParser implements QueryParser<String> {
                     map.putAll(map1);
                     return map;
                 })
-                .orElseThrow(() -> new ParserException("Не удалось распарсить Insert;\nЗапрос: [ " + input + "]"));
+                .orElseThrow(() -> new ParserException("Не удалось распарсить INSERT;\nЗапрос: [ " + input + "]"));
 
         return InsertQuery.builder().rows(Collections.singletonList(tokens)).build();
     }
@@ -100,6 +95,5 @@ public class StringParser implements QueryParser<String> {
         final Predicate<Map<String, Object>> predicate = PredicateUtils.buildPredicateFromString(stringPredicate);
 
         return DeleteQuery.builder().predicate(predicate).build();
-
     }
 }

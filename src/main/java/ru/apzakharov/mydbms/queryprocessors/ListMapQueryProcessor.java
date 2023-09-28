@@ -13,10 +13,11 @@ import java.util.stream.Collectors;
 public class ListMapQueryProcessor implements QueryProcessor<List<Map<String, Object>>> {
     /**
      * Выполнение 'Q query' к представленному хранилищу 'storage'
-     * @param query - запрос к хранилищу
+     *
+     * @param query   - запрос к хранилищу
      * @param storage - Представленное хранилище данных
-     * @return
      * @param <Q>
+     * @return
      */
     @Override
     public <Q extends Query> List<Map<String, Object>> processQuery(Q query, List<Map<String, Object>> storage) {
@@ -64,7 +65,7 @@ public class ListMapQueryProcessor implements QueryProcessor<List<Map<String, Ob
 
     private List<Map<String, Object>> processSelect(SelectQuery selectQuery, List<Map<String, Object>> storage) {
         final List<Map<String, Object>> sample = storage.stream()
-                .filter(row -> !selectQuery.getPredicate().test(row))
+                .filter(row -> selectQuery.getPredicate().test(row))
                 .collect(Collectors.toList());
         log.info(sample);
         return storage;
@@ -78,15 +79,16 @@ public class ListMapQueryProcessor implements QueryProcessor<List<Map<String, Ob
 
     private List<Map<String, Object>> processUpdate(UpdateQuery updateQuery, List<Map<String, Object>> storage) {
         final Map<String, Object> tokensWithValues = updateQuery.getTokensWithValue();
-        return storage.stream()
-                .filter(row -> !updateQuery.getPredicate().test(row))
-                .peek(row -> {
+        storage.stream()
+                .filter(row -> updateQuery.getPredicate().test(row))
+                .forEach(row -> {
                     tokensWithValues.keySet().forEach(tokenName -> {
                         final Object newValue = tokensWithValues.get(tokenName);
                         row.replace(tokenName, newValue);
                     });
-                }).collect(Collectors.toList());
+                });
 
+        return storage;
     }
 
     private <R> R tryToProcess(Callable<R> callable) {
