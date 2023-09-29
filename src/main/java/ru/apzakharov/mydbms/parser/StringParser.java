@@ -29,13 +29,18 @@ public class StringParser implements QueryParser<String> {
 
     /**
      * Метод осуществляет сопоставленеие входной строки с конкретными объектами-запросами.
-     *
+     * Синтаксис запрсов:
+     * INSERT VALUES lastName=BASE_NAME, id=3, age=40, active=true
+     * DELETE WHERE  lastname=BASE_NAME
+     * UPDATE VALUES lastname=ANOTHER_NAME where id=3
+     * SELECT WHERE id=3
      * @param input - объект, который нуно распарсить для  получения объекта-запроса
      * @param <Q>   - тип запроса
      * @return
      */
     @Override
     public <Q extends Query> Q parseQuery(String input) {
+        input = input.trim();
         final String[] tokens = input.split(" ");
         final String startToken = tokens[0].toUpperCase();
 

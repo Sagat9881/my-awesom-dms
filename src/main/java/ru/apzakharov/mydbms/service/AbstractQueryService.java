@@ -34,10 +34,8 @@ public abstract class AbstractQueryService<Q, S> implements QueryService<Q, S> {
     public void processCommand(Q inputCommand) {
         try {
             final Query query = parser.parseQuery(inputCommand);
-            //Максмально ужасный мув
 
             this.storage = processor.processQuery(query, storage);
-
         } catch (Exception e) {
             log.error(e);
         }

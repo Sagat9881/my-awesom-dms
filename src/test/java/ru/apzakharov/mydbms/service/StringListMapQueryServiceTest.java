@@ -54,6 +54,8 @@ class StringListMapQueryServiceTest {
                     storage.add(new HashMap<>());
                     return storage;
                 });
+
+
         service.processCommand("INSERT VALUES lastName=" + BASE_NAME + ", id=3, age=40, active=true");
         service.processCommand("INSERT VALUES lastName=" + BASE_NAME + ", id=4, age=40, active=true");
         service.processCommand("INSERT VALUES lastName=" + BASE_NAME + ", id=5, age=40, active=true");
