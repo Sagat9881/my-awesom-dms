@@ -1,7 +1,7 @@
-package ru.apzakharov.mydbms.parser;
+package ru.apzakharov.mydbms.parsers;
 
 import lombok.extern.log4j.Log4j2;
-import ru.apzakharov.mydbms.exception.ParserException;
+import ru.apzakharov.mydbms.exceptions.ParserException;
 import ru.apzakharov.mydbms.query.*;
 import ru.apzakharov.mydbms.utils.PredicateUtils;
 

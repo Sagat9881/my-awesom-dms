@@ -1,4 +1,4 @@
-package ru.apzakharov.mydbms.exception;
+package ru.apzakharov.mydbms.exceptions;
 
 import ru.apzakharov.mydbms.query.Query;
 import ru.apzakharov.mydbms.query.QueryType;

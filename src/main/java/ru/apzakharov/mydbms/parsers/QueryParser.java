@@ -1,4 +1,4 @@
-package ru.apzakharov.mydbms.parser;
+package ru.apzakharov.mydbms.parsers;
 
 import ru.apzakharov.mydbms.query.Query;
 

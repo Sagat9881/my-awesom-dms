@@ -1,4 +1,4 @@
-package ru.apzakharov.mydbms.exception;
+package ru.apzakharov.mydbms.exceptions;
 
 import static ru.apzakharov.mydbms.utils.ExceptionUtils.buildMessage;
 

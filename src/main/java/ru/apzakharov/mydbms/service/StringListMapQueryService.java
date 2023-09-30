@@ -1,9 +1,9 @@
 package ru.apzakharov.mydbms.service;
 
-import lombok.Builder;
 import lombok.experimental.SuperBuilder;
-import ru.apzakharov.mydbms.parser.QueryParser;
-import ru.apzakharov.mydbms.parser.StringParser;
+import org.springframework.stereotype.Service;
+import ru.apzakharov.mydbms.parsers.QueryParser;
+import ru.apzakharov.mydbms.parsers.StringParser;
 import ru.apzakharov.mydbms.queryprocessors.ListMapQueryProcessor;
 import ru.apzakharov.mydbms.queryprocessors.QueryProcessor;
 

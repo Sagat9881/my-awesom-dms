@@ -3,7 +3,7 @@ package ru.apzakharov.mydbms.service;
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;
 import lombok.extern.log4j.Log4j2;
-import ru.apzakharov.mydbms.parser.QueryParser;
+import ru.apzakharov.mydbms.parsers.QueryParser;
 import ru.apzakharov.mydbms.query.Query;
 import ru.apzakharov.mydbms.queryprocessors.QueryProcessor;
 

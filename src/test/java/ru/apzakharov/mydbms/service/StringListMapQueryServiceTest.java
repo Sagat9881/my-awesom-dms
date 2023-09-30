@@ -7,7 +7,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
-import ru.apzakharov.mydbms.parser.QueryParser;
+import ru.apzakharov.mydbms.parsers.QueryParser;
 import ru.apzakharov.mydbms.query.*;
 import ru.apzakharov.mydbms.queryprocessors.QueryProcessor;
 

@@ -1,7 +1,7 @@
 package ru.apzakharov.mydbms.queryprocessors;
 
 import lombok.extern.log4j.Log4j2;
-import ru.apzakharov.mydbms.exception.ProcessorException;
+import ru.apzakharov.mydbms.exceptions.ProcessorException;
 import ru.apzakharov.mydbms.query.*;
 
 import java.util.List;
