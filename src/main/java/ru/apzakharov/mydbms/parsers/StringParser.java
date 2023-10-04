@@ -1,6 +1,7 @@
 package ru.apzakharov.mydbms.parsers;
 
 import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Service;
 import ru.apzakharov.mydbms.exceptions.ParserException;
 import ru.apzakharov.mydbms.query.*;
 import ru.apzakharov.mydbms.utils.PredicateUtils;
@@ -13,7 +14,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 @Log4j2
-//TODO: реализовать парсинги
+@Service
 public class StringParser implements QueryParser<String> {
 
 

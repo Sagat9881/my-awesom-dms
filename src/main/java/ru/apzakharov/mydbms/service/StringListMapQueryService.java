@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 @SuperBuilder
+@Service
 public class StringListMapQueryService extends AbstractQueryService<String, List<Map<String,Object>>>{
     public StringListMapQueryService() {
         super(new StringParser(), new ListMapQueryProcessor(), new ArrayList<>());

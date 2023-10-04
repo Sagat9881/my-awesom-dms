@@ -4,23 +4,20 @@ import org.springframework.shell.context.InteractionMode;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
+import ru.apzakharov.mydbms.service.QueryService;
 import ru.apzakharov.mydbms.service.StringListMapQueryService;
 
 @ShellComponent
 public class ShellController {
 
-    private final StringListMapQueryService service;
+    private final QueryService service;
 
-    public ShellController(StringListMapQueryService service) {
+    public ShellController(QueryService service) {
         this.service = service;
     }
-    public ShellController() {
-        this.service = new StringListMapQueryService();
-    }
-
 
     @ShellMethod(key = "execute")
-    public void execute(@ShellOption(value = "input") String input) {
+    public void execute(@ShellOption(value = "input",arity = 10) String input) {
         service.processCommand(input);
     }
 }

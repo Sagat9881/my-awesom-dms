@@ -1,6 +1,7 @@
 package ru.apzakharov.mydbms.queryprocessors;
 
 import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Service;
 import ru.apzakharov.mydbms.exceptions.ProcessorException;
 import ru.apzakharov.mydbms.query.*;
 
@@ -10,6 +11,7 @@ import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
 
 @Log4j2
+@Service
 public class ListMapQueryProcessor implements QueryProcessor<List<Map<String, Object>>> {
     /**
      * Выполнение 'Q query' к представленному хранилищу 'storage'

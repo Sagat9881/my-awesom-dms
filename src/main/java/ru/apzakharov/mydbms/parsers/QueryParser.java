@@ -1,7 +1,7 @@
 package ru.apzakharov.mydbms.parsers;
 
+import org.springframework.stereotype.Service;
 import ru.apzakharov.mydbms.query.Query;
-
 public interface QueryParser<O> {
     /**
      * Метод парсит входные данные в конкретные запросы к СУБД

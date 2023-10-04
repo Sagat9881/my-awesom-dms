@@ -1,5 +1,7 @@
 package ru.apzakharov.mydbms.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Сервис принимает на вход команду, парсит ее в DML запрос и выполняет для хранилища данных
  *
