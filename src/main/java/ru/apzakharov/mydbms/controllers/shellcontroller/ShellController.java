@@ -1,11 +1,9 @@
 package ru.apzakharov.mydbms.controllers.shellcontroller;
 
-import org.springframework.shell.context.InteractionMode;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 import ru.apzakharov.mydbms.service.QueryService;
-import ru.apzakharov.mydbms.service.StringListMapQueryService;
 
 @ShellComponent
 public class ShellController {

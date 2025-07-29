@@ -17,13 +17,12 @@ public class StringListMapQueryService extends AbstractQueryService<String, List
         super(new StringParser(), new ListMapQueryProcessor(), new ArrayList<>());
     }
 
-    public StringListMapQueryService(QueryParser<String> parser, QueryProcessor<List<Map<String,Object>>> processor, List<Map<String,Object>> storage){
+    public StringListMapQueryService(QueryParser<String> parser,
+                                     QueryProcessor<List<Map<String,Object>>> processor,
+                                     List<Map<String,Object>> storage){
         super(parser, processor, storage);
     }
 
-    public StringListMapQueryService(List storage){
-        super(new StringParser(), new ListMapQueryProcessor(), storage);
-    }
 
 
 }

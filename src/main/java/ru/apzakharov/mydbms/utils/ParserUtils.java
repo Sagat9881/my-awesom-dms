@@ -39,10 +39,4 @@ public class ParserUtils {
         }
         return newRow;
     }
-//
-//    public static Predicate parsePredicate(String[] splitStr) {
-//        Predicate predicate;
-//
-//    }
-
 }

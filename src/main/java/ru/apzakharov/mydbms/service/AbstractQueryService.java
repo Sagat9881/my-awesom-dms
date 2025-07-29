@@ -13,10 +13,6 @@ public abstract class AbstractQueryService<Q, S> implements QueryService<Q, S> {
     private final QueryParser<Q> parser;
     private final QueryProcessor<S> processor;
 
-    public S getStorage() {
-        return storage;
-    }
-
     @Getter
     private S storage;
 

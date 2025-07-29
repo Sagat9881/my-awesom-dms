@@ -59,10 +59,9 @@ public class ListMapQueryProcessor implements QueryProcessor<List<Map<String, Ob
     }
 
     private List<Map<String, Object>> processDelete(DeleteQuery deleteQuery, List<Map<String, Object>> storage) {
-        storage = storage.stream()
+        return storage.stream()
                 .filter(deleteQuery.getPredicate().negate())
                 .collect(Collectors.toList());
-        return storage;
     }
 
     private List<Map<String, Object>> processSelect(SelectQuery selectQuery, List<Map<String, Object>> storage) {
@@ -74,8 +73,7 @@ public class ListMapQueryProcessor implements QueryProcessor<List<Map<String, Ob
     }
 
     private List<Map<String, Object>> processInsert(InsertQuery insertQuery, List<Map<String, Object>> storage) {
-        final List<Map<String, Object>> newRows = insertQuery.getRows();
-        storage.addAll(newRows);
+        storage.addAll(insertQuery.getRows());
         return storage;
     }
 

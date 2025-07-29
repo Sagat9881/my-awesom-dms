@@ -22,7 +22,7 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 @MockitoSettings(strictness = Strictness.LENIENT)
 class StringListMapQueryServiceTest {
-    public static final String UPDATED_NAME = "другой";
+    public static final String UPDATED_NAME = "другое";
     public static final String BASE_NAME = "одно";
     @Mock
     private QueryParser<String> parser;
