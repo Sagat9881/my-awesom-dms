@@ -1,7 +1,6 @@
 package ru.apzakharov.mydbms.queryprocessors;
 
-import org.springframework.stereotype.Service;
-import ru.apzakharov.mydbms.query.*;
+import ru.apzakharov.mydbms.query.Query;
 
 /**
  * Интерфейс задает контракт взаимодействия с конкретным хранилищем данных (S)

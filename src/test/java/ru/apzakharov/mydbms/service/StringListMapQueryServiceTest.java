@@ -8,7 +8,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 import ru.apzakharov.mydbms.parsers.QueryParser;
-import ru.apzakharov.mydbms.query.*;
+import ru.apzakharov.mydbms.query.DeleteQuery;
+import ru.apzakharov.mydbms.query.InsertQuery;
+import ru.apzakharov.mydbms.query.QueryType;
+import ru.apzakharov.mydbms.query.UpdateQuery;
 import ru.apzakharov.mydbms.queryprocessors.QueryProcessor;
 
 import java.util.ArrayList;
